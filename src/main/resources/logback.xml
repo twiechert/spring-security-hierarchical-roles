@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d %5p | %t | %-55logger{55} | %m %n</pattern>
+        </encoder>
+    </appender>
+    <root level="info" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+    <logger name="de.twiechert.roleexample" level="debug" ref="CONSOLE" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <logger name="org.apache.http.headers" additivity="false">
+        <level value="debug"/>
+    </logger>
+</configuration>
